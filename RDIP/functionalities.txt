@@ -1,0 +1,12 @@
+The most important functionalities observed are :
+1) There is a dropdown menu to select the languages that are present.
+2) The Words that are displayed is of button type.
+3) The "Reform-the sentence" button functionality is put the words back in the initial position how it is .
+4) The "Check the correctness" functionality is  to check the correctness of the sentence we selected whether it is syntatically and semantically correct or not
+5) If the formed sentence is wrong , then "get the correct answers" button is invoked to see the right answers.
+6) Clicking on the button to get the right answers, the possible answers are also generated.
+7) Apart from these above features,it would be helpful if we have a undo button so that we can imagine what word to be followed to make a complete sense , rather taking the whole sentence to get reformed.
+8) There can be also a button to reveal the possible right answers if exists, even after the correct answer is given.
+
+    
+
