@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <style>
+    .navbar3
+    {
+       background-color: #CCEEEE;
+    }
+  body
+  {
+    max-width:1030px;
+    max-height:1000px;
+    margin:auto;
+    background-color: #1D3559;
+  }
+.h1 p
+{
+   color:white;
+   text-align:  left;
+   background-color:royalblue;
+   padding-top:5px;
+   padding-left:15px;
+   padding-bottom:5px;
+   font-size:25px;
+   margin: 0;
+}
+.h1 a
+{
+color:white;
+text-decoration: none;
+}
+.h1 a:hover
+{
+background:navy;
+text-decoration: none
+}
+.navbar ul 
+{
+   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.navbar li
+{
+  display: inline;
+  float: left
+}
+.navbar li a
+{
+text-decoration: none;
+font-size:20px;
+color:white;
+}
+.h2
+{
+  font-size: 60px;
+  font-family: serif;
+  background-color: #CCEEEE;
+  height: 1000px;
+  text-align: left;
+  padding-left:5px;
+}
+.h2 p
+{
+  padding-left:25px;
+  padding-top:5px;
+}
+
+.navbar2 ul 
+{
+  list-style: none;
+}
+.navbar2 li
+{
+  display: inline;
+}
+.navbar2 a
+{
+padding:14px 16px;
+font-size: 15px;
+color: #00688B   ;
+text-decoration: underline;
+}
+.navbar2 a:hover
+{
+
+color:white;
+ background: #104E8B   ;
+ text-decoration: underline;
+}
+.navbar2
+{
+    background-color: white;
+    height:900px;
+    font-family: sans-serif;
+    margin:30px;
+    box-shadow: 0px 20px 25px 5px lightslategray;
+ }
+.h1{
+    background-color: yellow;
+}
+#introduction p
+{
+  font-size:15px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    line-height:1.6;
+}
+#introduction h4
+{
+padding:20px;
+}
+#theory p
+{
+   font-size:15px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    line-height:1.6;
+}
+#theory ol li{
+ font-size:15px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  list-style-type: decimal;
+  display: list-item;
+  line-height: 1.6;
+ 
+}
+#theory h4
+{
+padding-left:20px;
+padding-bottom: 10px
+}
+#theory h5
+{
+padding-left:20px;
+}
+
+#objective p
+{
+   font-size:16px;
+   border-top: 1px solid silver;
+   border-bottom: 1px solid silver;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    line-height:1.6;
+    padding:50px;
+}
+#objective h4
+{
+  padding-top: 20px;
+padding-left:20px;
+padding-bottom: 30px;
+}
+
+#quizzes p
+{
+   font-size:20px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    line-height:1.6;
+}
+#quizzes ol li
+{
+ font-size:15px;
+ padding-left:30px;
+ font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  list-style-type: decimal;
+  list-style-position: inside;
+  display: list-item;
+  line-height: 1.6;
+}
+#quizzes ol
+{
+    padding-left:30px;
+}
+
+#quizzes h4
+{
+padding-left:20px;
+padding-top: 15px;
+padding-bottom: 15px
+}
+#procedure h4
+{
+padding-left:20px;
+padding-top: 15px;
+padding-bottom: 15px
+}
+#procedure ol li{
+ font-size:15px;
+   padding-left:30px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  list-style-type: decimal;
+  list-style-position: inside;
+  display: list-item;
+  line-height: 1.6;
+}
+#procedure p
+{
+   font-size:15px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+     line-height: 1.6;
+}
+
+#procedure ol
+{
+    padding-left:30px;
+}
+#experiment h4
+{
+padding-left:20px;
+padding-top: 15px;
+padding-bottom: 15px
+}
+#experiment select
+{
+  font-size:15px;
+}
+#experiment p
+{
+   font-size:16px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+     line-height: 0.3;
+     color:#00009C;
+     font-weight: bolder;
+}
+</style>
+<script>
+    $(document).ready(function()
+    {
+      $("#theory").hide();
+    $("#objective").hide();
+    $("#quizzes").hide();
+    $("#procedure").hide();
+    $("#experiment").hide();
+
+
+    $("#start").click(function (e) {
+    $("#theory").hide();
+    $("#objective").hide();
+    $("#quizzes").hide();
+    $("#procedure").hide();
+    $("#experiment").hide();
+    $("#introduction").show();
+    });
+
+    $("#describe").click(function (e) {
+     $("#theory").show();
+    $("#introduction").hide();
+    $("#objective").hide();
+   $("#procedure").hide();
+    $("#quizzes").hide();
+    $("#experiment").hide();
+    
+});
+    $("#aim").click(function (e) {
+    $("#introduction").hide();
+    $("#theory").hide();
+    $("#objective").show();
+     $("#quizzes").hide();
+     $("#procedure").hide();
+     $("#experiment").hide();
+    
+});
+    $("#evaluate").click(function (e) {
+    $("#introduction").hide();
+    $("#theory").hide();
+    $("#objective").hide();
+     $("#quizzes").show();
+     $("#procedure").hide();
+     $("#experiment").hide();
+    
+});
+    $("#process").click(function (e) {
+    $("#introduction").hide();
+    $("#theory").hide();
+    $("#objective").hide();
+     $("#quizzes").hide();
+     $("#procedure").show();
+     $("#experiment").hide();
+    
+});
+        $("#apply").click(function (e) {
+    $("#introduction").hide();
+    $("#theory").hide();
+    $("#objective").hide();
+     $("#quizzes").hide();
+     $("#procedure").hide();
+     $("#experiment").show();
+    
+});
+
+    });
+  </script>
+</head>
+
+<body>
+  <center>
+      <div class="navbar3">
+        <nav class="navbar navbar-expand-sm">
+      <img src="icon1.png" alt="logo" style="width:100px;margin-right: 813px;">
+      <img src="icon.png"  alt="logo" style="width:100px;">
+    </nav>
+  </div>
+      <div class="row row-cols-4 no-gutters">
+          <div class="col-12 bg-light">
+    
+      <section class="h1">
+        <p><a href="http://cl-iiith.vlabs.ac.in/index.html">COMPUTATIONAL LINGUISTICS LAB</a></p>
+      </section></div></div>
+      <div class="navbar">
+       <ul>
+        <li>
+          <a href="http://cl-iiith.vlabs.ac.in/index.html">Home</a>
+        </li>
+        <li>
+          <a href="http://cl-iiith.vlabs.ac.in/index.html">
+           > Computational Labs
+          </a>
+        </li>
+        <li>
+          <a href="index.html"> > Forming Sentences-2
+          </a>
+        </li>
+      </ul>
+      </div>
+      </div>
+
+      <section class="h2">
+       <p>Forming Sentences-2</p>
+       <div class="navbar2">
+        <nav class="navbar navbar-expand-sm">
+
+     <a class="navbar-brand" href="#" id="start">
+      <img src="introduction.jpg" alt="intro_img" style="width:100px;">
+      <ul class="navbar-nav">
+      <li class="nav-item">INTRODUCTION</li></ul>
+    </a>
+
+     <a class="navbar-brand" href="#" onclick=" return mine()" id="describe">
+      <img src="theory.png" alt="theory_img" style="width:65px;">
+      <ul class="navbar-nav">
+      <li class="nav-item">THEORY</li></ul>
+  </a>
+
+  <a class="navbar-brand" href="#" id="aim">
+    <img src="objective.jpg" alt="obj_img" style="width:85px;">
+    <ul class="navbar-nav">
+    <li class="nav-item">OBJECTIVE</li></ul>
+  </a>
+
+
+  <a class="navbar-brand" href="#" id="apply">
+    <img src="experiment.png" alt="exp_img" style="width:130px;">
+    <ul class="navbar-nav">
+    <li class="nav-item">EXPERIMENT</li></ul>
+  </a>
+
+
+  <a class="navbar-brand" href="#" id="evaluate">
+    <img src="quiz.jpg" alt="quiz_img" style="width:100px;">
+    <ul class="navbar-nav">
+    <li class="nav-item">QUIZZES</li></ul>
+  </a>
+
+
+  <a class="navbar-brand" href="#" id="process">
+    <img src="procedure.jpg" alt="pro_img" style="width:120px;">
+    <ul class="navbar-nav">
+    <li class="nav-item">PROCEDURE</li></ul>
+  </a>
+  
+</nav>
+<section id="introduction" class="introduction">
+  <h4>Introduction</h4>
+  <p>A sentence can become more complex, if more than one verb is present or by joining two sentences or words using conjunctions or by some other methods.
+  </p>
+  <p>
+    In this experiment also, you will make more difficult sentences using the given words.
+  </p>
+
+ </section>
+<section id="theory" class="theory">
+  <h4>Theory</h4>
+  <h5><u><b>Clause</b></u></h5>
+  <p>A clause typically contains a subject noun phrase and a finite verb. Some languages allow subjects to be omitted. There are two types of subclauses:
+  </p>
+
+  <ol>
+      <li>independent clause</li>
+      <li>subordinate clause</li>
+  </ol>
+
+  <p>Independent clause shows the complete meaning in it. For example: Ram eats. A subordinate clause is not a complete sentence. For example: because I am sick. Sentences can also be classified on the basis of clauses.
+  </p>
+  <p>Classification on the basis of clauses are:
+  </p>
+  <ol>
+    <li>A <b>simple sentence</b> consists of only one independent clause. There are no subordinate clauses.</li>
+    <li>A <b>compound sentence</b> consists of more than one independent clauses joined ny conjunctions or punctuations. There are no subordinate clauses.</li>
+    <li>A <b>complex sentence</b> consists of atleast one indpendent clause and a single subordinate clause</li>
+    <li>A <b>complex-compound sentence</b> consists of more than one independent clauses and atleast one of the independent clauses has one or more than one subordinate clauses</li>
+  </ol>
+ </section>
+
+ <section id="objective">
+  <h4>Objective</h4>
+  <p>The objective of this experiment is to know how to form logically correct sentences from the given words.
+  </p>
+ 
+  </section>
+     <script src="tasks.js"></script>
+     <section id="quizzes">
+      <h4>Quizzes</h4>
+       <p>Which of these is a valid sentence?
+        </p>
+        <ol>
+          <li>Ram came after lunch.</li>
+          <li>Ram came after having lunch.</li>
+          <li>Sleeping I saw a tiger.</li>
+          <li>I saw a sleeping tiger.</li>
+          <li>No Parking is allowed.</li>
+        </ol>
+        <br>
+        <ol>
+          <li>खाते खाते राम सो गया</li>
+          <li>राम खाते खाते सो गया</li>
+          <li>राम खाता खाते सो गया</li>
+          <li>राम खाकर सो गया</li>
+          <li>राम और श्याम ने भी खाना खाया</li>
+          <li>राम ने और श्याम भी खाना खाया</li>
+        </ol>
+      </section>
+
+
+  <section id="experiment">
+    <h4>Experiment</h4>
+    <center>
+      <select onchange="lang1()">
+         <option value="none" selected>---Select Language---</option>
+         <option  id="english">English</option>
+         <option value="Hindi" id="hindi">Hindi</option>
+      </select>
+      <br><br>
+      <p id="example"></p>
+      <p id="example1" style="color:blue; font-style: italic;font-weight:lighter;"></p>
+    </center>
+  </section>
+
+  <section id="procedure">
+    <h4>Procedure</h4>
+    <p><b><u>STEP-1</u></b>:Select a language which you know better<br>
+    <b><u>STEP-2</u></b>:Select the buttons which has words written on it, in a proper order<br>
+    <b><u>OUTPUT</u></b>: Group of words in a selected order will be shown</p>
+    <p><b><u>NOTE:</u></b></p>
+    <ol>
+      <li>If a wrong sentence is formed, <button type="button">Re-form the sentence</button> is available for re-setting.</li>
+      <li>You can check whether the formed sentence is a valid or not by clicking <button type="button">Check the correctness of this sentence</button></li>
+      <li>For a wrong sentence, you can get the correct sentence by clicking <button type="button">Get correct sentence</button></li>
+   </ol>
+ </section>
+
+ <script src="tasks.js"></script>
+</center>
+</body>
+</html>
+
+
