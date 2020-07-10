@@ -20,21 +20,3 @@ var sen6=["एक लाल किताब वहाँ है","एक ला�
 var sen7=["एक बड़ी सी किताब वहाँ है	","एक बड़ी सी किताब है वहाँ","बड़ी सी एक किताब वहाँ है","बड़ी सी एक किताब है वहाँ","वहाँ है एक बड़ी सी किताब","वहाँ है बड़ी सी एक किताब"," है वहाँ एक बड़ी सी किताब","है वहाँ बड़ी सी एक किताब"]
 
 
-function lang1()
-{
-if(document.getElementById("english").selected)
-{
-	document.getElementById("example").innerHTML="Form a sentence(Declarative or Interrogative or any other type) from the given words"
-	document.getElementById("example1").innerHTML="(select the buttons in proper order)"
-}
-else if (document.getElementById("hindi").selected) 
-{
-	document.getElementById("example").innerHTML="Form a sentence(Declarative or Interrogative or any other type) from the given words"
-	document.getElementById("example1").innerHTML="(select the buttons in proper order)"
-}
-else
-{
-	document.getElementById("example").innerHTML=""
-	document.getElementById("example1").innerHTML=""
-}
-}
