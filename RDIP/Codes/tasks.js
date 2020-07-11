@@ -1,3 +1,5 @@
+var correct_english_sentence=["John ate an apple before afternoon","some students like to study in the night","John and Mary went to church","John went to church after eating","did he go to market","the woman who called my sister sells cosmetics","John goes to the library and studies","the teacher returned the book after she noticed the error","I told her that I bought a book yesterday","John ate an apple so did she"]
+
 var sentence1=["John ate an apple before afternoon","before afternoon John ate an apple","John before afternoon ate an apple"]
 var sentence2=["some students like to study in the night","at night some students like to study"]
 var sentence3=["John and Mary went to church","Mary and John went to church"]
@@ -9,7 +11,7 @@ var sentence8=["John ate an apple so did she","she ate an apple so did John"]
 var sentence9=["the teacher returned the book after she noticed the error","the teacher noticed the error after she returned the book","after the teacher returned the book she noticed the error","after the teacher noticed the error she returned the book","she returned the book after the teacher noticed the error","she noticed the error after the teacher returned the book","after she returned the book the teacher noticed the error","after she noticed the error the teacher returned the book"]
 var sentence10=["I told her that I bought a book yesterday","I told her yesterday that I bought a book","yesterday I told her that I bought a book","I bought a book that I told her yesterday","I bought a book yesterday that I told her"	,"yesterday I bought a book that I told her"]
 
-
+var correct_hindi_sentence=["राम और श्याम बाजार गयें","राम सोया और श्याम भी","मैंने उसे बताया कि राम सो रहा है","राम खाकर सोया","बिल्लियों को मारकर कुत्ता सो गया"	,"एक लाल किताब वहाँ है","एक बड़ी सी किताब वहाँ है	"]
 
 var sen1=["राम और श्याम बाजार गयें","राम और श्याम गयें बाजार","बाजार गयें राम और श्याम","गयें बाजार राम और श्याम"]
 var sen2=["राम सोया और श्याम भी","श्याम सोया और राम भी","सोया श्याम और राम भी","सोया राम और श्याम भी"]
@@ -19,22 +21,64 @@ var sen5=["बिल्लियों को मारकर कुत्ता
 var sen6=["एक लाल किताब वहाँ है","एक लाल किताब है वहाँ","वहाँ है एक लाल किताब","है वहाँ एक लाल किताब"]
 var sen7=["एक बड़ी सी किताब वहाँ है	","एक बड़ी सी किताब है वहाँ","बड़ी सी एक किताब वहाँ है","बड़ी सी एक किताब है वहाँ","वहाँ है एक बड़ी सी किताब","वहाँ है बड़ी सी एक किताब"," है वहाँ एक बड़ी सी किताब","है वहाँ बड़ी सी एक किताब"]
 
-
 function lang1()
 {
+	document.getElementById("example3").innerHTML=""
+	count=0
+
 if(document.getElementById("english").selected)
 {
+
 	document.getElementById("example").innerHTML="Form a sentence(Declarative or Interrogative or any other type) from the given words"
-	document.getElementById("example1").innerHTML="(select the buttons in proper order)"
+	document.getElementById("example1").innerHTML="(select the buttons in proper order)";
+	var a = correct_english_sentence[Math.floor(Math.random() * correct_english_sentence.length)];
+	let body = document.getElementsByTagName("p")[3];
+	a1 = a.split(" ");
+	for(i=0;i<a1.length;i++)
+    {
+	  j = Math.floor(Math.random()*a1.length)
+	  a = a1[i];
+	  a1[i] = a1[j]
+	  a1[j] = a;
+}
+
+
+for(i=0;i<a1.length;i++)
+{
+		 let button = document.createElement("button");
+         button.innerHTML = a1[i]
+         body.appendChild(button);
+}
+
+   
 }
 else if (document.getElementById("hindi").selected) 
-{
+{ 
+	document.getElementById("example3").innerHTML=""
+
 	document.getElementById("example").innerHTML="Form a sentence(Declarative or Interrogative or any other type) from the given words"
-	document.getElementById("example1").innerHTML="(select the buttons in proper order)"
+	document.getElementById("example1").innerHTML="(select the buttons in proper order)";
+	var b  =  correct_hindi_sentence[Math.floor(Math.random() * correct_hindi_sentence.length)];
+    b1  =  b.split(" ");
+	let body = document.getElementsByTagName("p")[3];
+	for(i=0;i<b1.length;i++)
+    {
+	   j  =  Math.floor(Math.random()*b1.length)
+	   a  =  b1[i];
+	   b1[i]  =  b1[j]
+	   b1[j]  =  a;
+    }
+    for(i=0;i<b1.length;i++)
+    {
+		 let button = document.createElement("button");
+         button.innerHTML = b1[i]
+         body.appendChild(button)
+    }
 }
 else
-{
+  {
 	document.getElementById("example").innerHTML=""
 	document.getElementById("example1").innerHTML=""
-}
+	document.getElementById("example3").innerHTML=""
+   }
 }
