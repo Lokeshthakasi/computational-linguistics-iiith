@@ -24,7 +24,11 @@ var sen7=["एक बड़ी सी किताब वहाँ है	","एक
 function lang1()
 {
 	document.getElementById("example3").innerHTML=""
-	count=0
+	document.getElementById("example5").innerHTML=""
+	document.getElementById("example4").innerHTML=""
+	document.getElementById("button3").style.visibility="hidden";
+	count = 0
+	
 
 if(document.getElementById("english").selected)
 {
@@ -48,7 +52,24 @@ for(i=0;i<a1.length;i++)
 		 let button = document.createElement("button");
          button.innerHTML = a1[i]
          body.appendChild(button);
+
+
+button.addEventListener ("click", function() {
+	document.getElementById("example4").innerHTML="Formed Sentence<span style='font-style:italic;color:blue;font-weight:lighter'>(after selecting words):</span>";
+    document.getElementById("example5").innerHTML+=this.innerHTML+"  ";
+    this.style.visibility="hidden";
+    count=count+1;
+    if (count==1) 
+     {
+     	document.getElementById("button3").style.visibility="visible";
+     }
+    if (count==a1.length) 
+     {
+     	document.getElementById("button4").style.visibility="visible";
+     }
+  });
 }
+
 
    
 }
@@ -73,6 +94,21 @@ else if (document.getElementById("hindi").selected)
 		 let button = document.createElement("button");
          button.innerHTML = b1[i]
          body.appendChild(button)
+
+         button.addEventListener ("click", function() {
+	document.getElementById("example4").innerHTML="Formed Sentence<span style='font-style:italic;color:blue;font-weight:lighter'>(after selecting words):</span>";
+    document.getElementById("example5").innerHTML+=this.innerHTML+"  ";
+    this.style.visibility="hidden";
+    count=count+1;
+    if (count==1) 
+     {
+     	document.getElementById("button3").style.visibility="visible";
+     }
+    if (count==a1.length) 
+     {
+     	document.getElementById("button4").style.visibility="visible";
+     }
+});
     }
 }
 else
