@@ -26,95 +26,114 @@ function lang1()
 	document.getElementById("example3").innerHTML=""
 	document.getElementById("example5").innerHTML=""
 	document.getElementById("example4").innerHTML=""
-	document.getElementById("button3").style.visibility="hidden";
+	document.getElementById("but3").style.visibility="hidden";
 	count = 0
 	
 
 if(document.getElementById("english").selected)
 {
 
-	document.getElementById("example").innerHTML="Form a sentence(Declarative or Interrogative or any other type) from the given words"
-	document.getElementById("example1").innerHTML="(select the buttons in proper order)";
-	var a = correct_english_sentence[Math.floor(Math.random() * correct_english_sentence.length)];
-	let body = document.getElementsByTagName("p")[3];
-	a1 = a.split(" ");
-	for(i=0;i<a1.length;i++)
-    {
-	  j = Math.floor(Math.random()*a1.length)
-	  a = a1[i];
-	  a1[i] = a1[j]
-	  a1[j] = a;
+    document.getElementById("example").innerHTML="Form a sentence(Declarative or Interrogative or any other type) from the given words"
+    document.getElementById("example1").innerHTML="(select the buttons in proper order)";
+    var a=correct_english_sentence[Math.floor(Math.random() * correct_english_sentence.length)];
+    let body = document.getElementsByTagName("p")[3];
+    a1=a.split(" ");
+    for(i=0;i<a1.length;i++)
+{
+    j=Math.floor(Math.random()*a1.length)
+    a=a1[i];
+    a1[i]=a1[j]
+    a1[j]=a;
 }
 
 
 for(i=0;i<a1.length;i++)
 {
-		 let button = document.createElement("button");
-         button.innerHTML = a1[i]
-         body.appendChild(button);
-
-
+         let button = document.createElement("button");
+         button.id='button'+i;
+    
+  button.innerHTML = a1[i]
+  body.appendChild(button);
+     
 button.addEventListener ("click", function() {
-	document.getElementById("example4").innerHTML="Formed Sentence<span style='font-style:italic;color:blue;font-weight:lighter'>(after selecting words):</span>";
-    document.getElementById("example5").innerHTML+=this.innerHTML+"  ";
+    document.getElementById("example4").innerHTML="Formed Sentence<span style='font-style:italic;color:blue;font-weight:lighter'>(after selecting words):</span>";
+    document.getElementById("example5").innerHTML+=this.innerHTML+" ";
     this.style.visibility="hidden";
     count=count+1;
-    if (count==1) 
+
+    if (count>0 ) 
      {
-     	document.getElementById("button3").style.visibility="visible";
+        document.getElementById("but3").style.visibility="visible";
      }
     if (count==a1.length) 
      {
-     	document.getElementById("button4").style.visibility="visible";
+        document.getElementById("button4").style.visibility="visible";
      }
-  });
-}
+});
 
+}
 
    
 }
 else if (document.getElementById("hindi").selected) 
 { 
-	document.getElementById("example3").innerHTML=""
+    
 
-	document.getElementById("example").innerHTML="Form a sentence(Declarative or Interrogative or any other type) from the given words"
-	document.getElementById("example1").innerHTML="(select the buttons in proper order)";
-	var b  =  correct_hindi_sentence[Math.floor(Math.random() * correct_hindi_sentence.length)];
-    b1  =  b.split(" ");
-	let body = document.getElementsByTagName("p")[3];
-	for(i=0;i<b1.length;i++)
-    {
-	   j  =  Math.floor(Math.random()*b1.length)
-	   a  =  b1[i];
-	   b1[i]  =  b1[j]
-	   b1[j]  =  a;
-    }
+    document.getElementById("example").innerHTML="Form a sentence(Declarative or Interrogative or any other type) from the given words"
+    document.getElementById("example1").innerHTML="(select the buttons in proper order)";
+    var b=correct_hindi_sentence[Math.floor(Math.random() * correct_hindi_sentence.length)];
+            b1=b.split(" ");
+    let body = document.getElementsByTagName("p")[3];
     for(i=0;i<b1.length;i++)
-    {
-		 let button = document.createElement("button");
-         button.innerHTML = b1[i]
-         body.appendChild(button)
+{
+    j=Math.floor(Math.random()*b1.length)
+    a=b1[i];
+    b1[i]=b1[j]
+    b1[j]=a;
 
-         button.addEventListener ("click", function() {
-	document.getElementById("example4").innerHTML="Formed Sentence<span style='font-style:italic;color:blue;font-weight:lighter'>(after selecting words):</span>";
-    document.getElementById("example5").innerHTML+=this.innerHTML+"  ";
+}
+for(i=0;i<b1.length;i++)
+{
+         let button = document.createElement("button");
+         button.id='button'+i;
+  button.innerHTML = b1[i]
+  body.appendChild(button)
+
+button.addEventListener ("click", function() {
+    document.getElementById("example4").innerHTML="Formed Sentence<span style='font-style:italic;color:blue;font-weight:lighter'>(after selecting words):</span>";
+    document.getElementById("example5").innerHTML+=this.innerHTML+" ";
     this.style.visibility="hidden";
     count=count+1;
-    if (count==1) 
+    if (count>0) 
      {
-     	document.getElementById("button3").style.visibility="visible";
-     }
-    if (count==a1.length) 
-     {
-     	document.getElementById("button4").style.visibility="visible";
+        document.getElementById("but3").style.visibility="visible";
      }
 });
-    }
+
 }
+}
+
+
 else
-  {
-	document.getElementById("example").innerHTML=""
-	document.getElementById("example1").innerHTML=""
-	document.getElementById("example3").innerHTML=""
-   }
+{
+    document.getElementById("example").innerHTML=""
+    document.getElementById("example1").innerHTML=""
+    document.getElementById("example3").innerHTML=""
+}
+}
+
+function reset()
+
+{
+
+    for(i=0;i<a1.length||i<b1.length;i++)
+    {
+      if(document.getElementById('button'+i).style.visibility=="hidden")
+      
+        document.getElementById('button'+i).style.visibility="visible";
+      document.getElementById('example4').innerHTML=""
+      document.getElementById('example5').innerHTML=""
+      document.getElementById('but3').style.visibility="hidden"
+    
+}
 }
