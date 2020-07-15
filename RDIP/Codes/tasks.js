@@ -31,6 +31,7 @@ a1=a.split(" ");
   document.getElementById("example3").innerHTML=""
   document.getElementById("example5").innerHTML=""
   document.getElementById("example4").innerHTML=""
+  document.getElementById("example6").innerHTML=""
   document.getElementById("but3").style.visibility="hidden";
   document.getElementById('but4').style.visibility="hidden"
   count = 0
@@ -141,12 +142,80 @@ function reset()
     for(i=0;i<a1.length||i<b1.length;i++)
     {
       if(document.getElementById('button'+i).style.visibility=="hidden")
+      {
       
         document.getElementById('button'+i).style.visibility="visible";
       document.getElementById('example4').innerHTML=""
       document.getElementById('example5').innerHTML=""
+      document.getElementById('example6').innerHTML=""
       document.getElementById('but3').style.visibility="hidden"
       document.getElementById('but4').style.visibility="hidden" 
+    }
     
+}
+}
+
+function analyse()
+{
+
+  var m=String(document.getElementById("example5").innerHTML).replace(/\s+$/, '');
+  n=0;
+  o=0
+  if(document.getElementById("english").selected)
+  {
+  for(i=0;i<10;i++)
+  {
+    for(j=0;j<eng1[i].length;j++)
+    {
+
+      if(m==eng1[i][j])
+      {
+           
+        n++;
+      }
+    }
+  }
+
+if(n==1)
+{
+      document.getElementById("example6").innerHTML="<span style='color:green;font-size:30px;position: absolute;top:700px;left: 525px;'>Right answer!!!</span>"
+
+}
+else
+{
+      document.getElementById("example6").innerHTML="<span style='color:red;font-size:30px;position: absolute;top:700px;left: 525px;'>Wrong answer!!!</span>"
+  
+}
+
+}
+
+ else if(document.getElementById("hindi").selected)
+  {
+  for(i=0;i<7;i++)
+  {
+    for(j=0;j<hin1[i].length;j++)
+    {
+
+      if(m==hin1[i][j])
+      {
+           
+        o++;
+
+      }
+    }
+  }
+
+
+if(o==1)
+{
+      document.getElementById("example6").innerHTML="<span style='color:green;font-size:30px;position: absolute;top:700px;left: 525px;'>Right answer!!!</span>"
+
+}
+else
+{
+      document.getElementById("example6").innerHTML="<span style='color:red;font-size:30px;position: absolute;top:700px;left: 525px;'>Wrong answer!!!</span>"
+  
+}
+
 }
 }
