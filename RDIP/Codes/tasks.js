@@ -34,6 +34,7 @@ a1=a.split(" ");
   document.getElementById("example6").innerHTML=""
   document.getElementById("but3").style.visibility="hidden";
   document.getElementById('but4').style.visibility="hidden"
+  document.getElementById('but5').style.visibility="hidden";
   count = 0
   
 
@@ -150,6 +151,7 @@ function reset()
       document.getElementById('example6').innerHTML=""
       document.getElementById('but3').style.visibility="hidden"
       document.getElementById('but4').style.visibility="hidden" 
+      document.getElementById('but5').style.visibility="hidden"; 
     }
     
 }
@@ -178,13 +180,13 @@ function analyse()
 
 if(n==1)
 {
-      document.getElementById("example6").innerHTML="<span style='color:green;font-size:30px;position: absolute;top:700px;left: 525px;'>Right answer!!!</span>"
+      document.getElementById("example6").innerHTML="<span style='color:green;font-size:30px;position: absolute;top:720px;left: 575px;'>Right answer!!!</span>"
 
 }
 else
 {
-      document.getElementById("example6").innerHTML="<span style='color:red;font-size:30px;position: absolute;top:700px;left: 525px;'>Wrong answer!!!</span>"
-  
+      document.getElementById("example6").innerHTML="<span style='color:red;font-size:30px;position: absolute;top:720px;left: 575px;'>Wrong answer!!!</span>"
+       document.getElementById("but5").style.visibility="visible";  
 }
 
 }
@@ -208,12 +210,13 @@ else
 
 if(o==1)
 {
-      document.getElementById("example6").innerHTML="<span style='color:green;font-size:30px;position: absolute;top:700px;left: 525px;'>Right answer!!!</span>"
+      document.getElementById("example6").innerHTML="<span style='color:green;font-size:30px;position: absolute;top:720px;left: 575px;'>Right answer!!!</span>"
 
 }
 else
 {
-      document.getElementById("example6").innerHTML="<span style='color:red;font-size:30px;position: absolute;top:700px;left: 525px;'>Wrong answer!!!</span>"
+      document.getElementById("example6").innerHTML="<span style='color:red;font-size:30px;position: absolute;top:720px;left: 575px;'>Wrong answer!!!</span>"
+      document.getElementById("but5").style.visibility="visible";
   
 }
 
