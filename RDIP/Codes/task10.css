@@ -1,0 +1,159 @@
+body
+  {
+    max-width:1030px;
+    max-height:1000px;
+    margin:auto;
+    background-color: #279440;
+  }
+.h2
+{
+
+  font-size: 60px;
+  font-family: Impact, Charcoal, sans-serif;
+  background-color: #FC8535;
+  height: 1250px;
+  text-align: left;
+  padding-left:5px;
+}
+.h2 p
+{
+  padding-left:25px;
+  padding-top:2px;
+}
+
+.navbar2 ul 
+{
+  list-style: none;
+}
+.navbar2 li
+{
+  display: inline;
+}
+.navbar2 a
+{
+padding:14px 16px;
+font-size: 15px;
+color: #00688B;
+text-decoration: underline;
+}
+.navbar2 a:hover
+{
+ color:white;
+ background: #104E8B;
+ text-decoration: underline;
+}
+.navbar2
+{   
+    background-color: #ECF65D;
+    height:1200px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin:30px;
+    box-shadow: 0px 20px 25px 5px  white;
+}
+#experiment h4
+{
+padding-left:60px;
+padding-top: 44px;
+padding-bottom: 10px
+}
+#experiment select
+{
+  font-size:15px;
+}
+#example
+{
+  font-size:16px;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 0.1;
+  color:blue;
+  font-weight: bolder;
+}
+#example1
+{
+  font-size:16px;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 0.1;
+  color:blue;
+  font-weight: bolder;
+}
+#example3
+{
+  font-size:16px;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 0.1;
+  color:blue;
+  font-weight: bolder;
+  padding-bottom: 10px;
+}
+#example4
+{
+ font-size:16px;
+ font-family: "Times New Roman", Times, serif;
+ line-height: 0.1;
+ color:blue;
+ font-weight: bolder;
+ padding-bottom: 10px;
+}
+#example5
+{
+  font-size:16px;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 0.1;
+  color:blue;
+  font-weight: bolder;
+  padding-bottom: 10px;
+}
+button
+ {
+  width: 90px;
+  height: 30px;
+  margin: 2px;
+}
+#example5
+{
+  font-size: 30px;
+  color :#484848;
+}
+ #but3
+{
+  position: absolute;
+  top:550px;
+  left: 550px;
+  width: 250px;
+  height: 30px;
+ font-size:15px;
+  margin: 10px;
+}
+
+#but4
+{
+  position: absolute;
+  top:650px;
+  left: 525px;
+  width: 300px;
+  height: 30px;
+ font-size:15px;
+  margin: 10px;
+ }
+
+ #but5
+{
+  position: absolute;
+  top:780px;
+  left: 525px;
+  width: 300px;
+  height: 30px;
+ font-size:15px;
+  margin: 10px;
+ }
+
+ #example7
+{
+  position: absolute;
+  top:900px;
+  left: 525px;
+  font-size:20px;
+  color :black;
+  line-height: 1.6;
+}
+
