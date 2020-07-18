@@ -7,36 +7,36 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="task10.css">
+  <link rel="stylesheet" type="text/css" href="task12.css">
 </head>
 <body>
-    <center>
-      <section class="h2">
-         <p>Forming Sentences-2</p>
-            <div class="navbar2">
-                <section id="experiment">
-                    <h4><b>Experiment</b></h4>
-               <center>
-                 <select onchange="lang1()">
-                  <option value="none" selected>---Select Language---</option>
-                  <option  id="english">English</option>
-                  <option value="Hindi" id="hindi">Hindi</option>
-                 </select><br><br>
-                 <p id="example"></p>
-                 <p id="example1" style="color:blue; font-style: italic;font-weight:lighter;"></p>
-                 <p id="example3"></p>
-                 <p id="example4"></p>
-                 <p id="example5"></p>
-                  <button id="but3" style="visibility: hidden" onclick="reset()" >Re-form the sentence</button>
-                  <button id="but4" style="visibility: hidden" onclick="analyse()" >Check the correctness of this sentence</button>
-                  <p id="example6"></p>
-                  <button id="but5" style="visibility: hidden" onclick="change()">Get Correct Sentence</button><br>
-                  <p id="example7"></p>
-               </center>
-      </section>
-  
-     <script src="tasks.js"></script>
+   <div class="container">
+    <section class="h2">
+      <p id="head">Forming Sentences-2</p>
+      <div class="navbar2">
+        <section id="experiment">
+          <h4 class="heading"><b>Experiment</b></h4>
+          <center>
+            <select onchange="lang1()">
+              <option value="none" selected>---Select Language---</option>
+              <option id="english">English</option>
+              <option value="Hindi" id="hindi">Hindi</option>
+            </select><br><br>
+            <p id="example"></p>
+            <p id="example1" style="color:blue; font-style: italic;font-weight:lighter;"></p>
+            <p id="example3"></p>
+            <p id="example4"></p>
+            <p id="example5"></p>
+            <button id="but3" style="visibility: hidden" onclick="reset()">Re-form the sentence</button><br><br>
+            <button id="but4" style="visibility: hidden" onclick="analyse()">Check the correctness of this sentence</button>
+            <p id="example6"></p>
+            <button id="but5" style="visibility: hidden" onclick="change()">Get Correct Sentence</button><br>
+            <p id="example7"></p>
+          </center>
+        </section>
 
-</center>
+        <script src="tasks.js"></script>
+
+      </div>
 </body>
 </html>
